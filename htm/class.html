@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+    <script>
+    class SubjectInfo{
+        constructor(subject, credit){
+            this.subject = subject;
+            this.credit = credit;
+            this.days = [80, 120, 140];
+            this.price=[100,200,300,400]
+            this.day = this.days[0];
+            this.pri = this.price[0];
+        }
+        printOut(){
+            return '과목 : ' + this.subject + ', 학점 : ' + this.credit + ', 수업일: ' + this.day + '금액: ' + this.pri;
+        }
+        get lessonTime(){
+            return this.day + ', ' + this.pri;
+        }
+        set lessonTimePri(num) {
+            console.log(num[0]);
+            this.day = this.days[num[0]];
+            this.pri = this.price[num[1]]
+        }
+    }
+        var sub1 = new SubjectInfo('html', 1);
+        console.log(sub1.subject);
+        console.log(sub1.printOut());
+        console.log(sub1.lessonTime);
+        sub1.lessonTime=1;
+        console.log(sub1.lessonTimePri);
+        var sub2 = new SubjectInfo('css', 3);
+        console.log(sub2.subject);
+        sub2.lessonTimePri=[2,1];
+        console.log(sub2.printOut());
+        
+        var n1=10;
+        var n2=new Number(10);
+        console.log(n1===n2);
+        console.log(typeof(n1), typeof(n2));
+        
+        var n3=345.678
+        console.log((n3/10).toFixed()*10);
+        
+        var n4 = 127;
+        console.log(n4.toString(2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

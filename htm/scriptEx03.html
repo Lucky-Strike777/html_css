@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가위 바위 보 게임</title>
+    <script>
+//        가위 바위 보 게임을 합니다. 가위:1, 바위:2, 보:3
+        console.log(Math.random()); //0.0부터 0.9999 사이의 수
+        console.log(Math.floor(Math.random()*3) +1); //1부터 10 사이의 수)
+        do{
+        var com=(Math.floor(Math.random()*3) +1) ;//1부터 10 사이의 수)
+        var user=Number(prompt('가위(1),바위(2),보(3) 선택 : '));
+        var result=user-com;
+        var test
+        if(result==0){
+            test="비겼다";
+        }
+        else if(result==-2 || result==1){
+            test="이겼다";
+        }
+        else{
+            test="졌다";
+        }
+        document.write(test);
+        } while(!(result==-2 || result==1));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

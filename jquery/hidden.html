@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #board {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+    <script src="../js/jquery-3.6.3.js"></script>
+    <script>
+        $(function() {
+            $('img').hover(function() {
+                $(this).animate({
+                    width: '310px',
+                    height: '210px',
+                    left: '-5px',
+                    top: '-5px'
+                }, 10);
+            }, function() {
+                $(this).animate({
+                    width: '300px',
+                    height: '200px',
+                    left: '0px',
+                    top: '0px'
+                }, 10);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="board">
+        <img src="../images/f2.jpg">
+    </div>
+</body>
+
+</html>

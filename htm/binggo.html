@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>빙고게임</title>
+
+    <style>
+        #wrap {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #999
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #pan {
+            width: 480px;
+            height: 300px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+        #input {
+            margin: 10px;
+
+        }
+
+        #input #in {
+            display: block;
+            width: 30px;
+            height: 25px;
+            line-height: 25px;
+            float: left;
+            margin-left: 200px;
+        }
+
+        #input #btn {
+            display: block;
+            width: 50px;
+            height: 30px;
+            float: left;
+            text-align: center;
+        }
+
+        #value {
+            position: relative;
+            clear: both;
+        }
+
+        #value #val {
+            width: 200px;
+            height: 25px;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #666;
+        }
+    </style>
+    <script>
+        var binggo = [];
+        var tottext = "";
+        
+        var numList = new Set();
+            
+            while(numList.size < 25){
+                var r =Math.floor(Math.random()*50)+1;
+                numList.add(r)
+            }
+        var numLists = Array.from(numList);
+        
+        for (var i = 0; i < 5; i++) {
+            binggo[i] = [];
+        }
+        
+        var cnt = 0;
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                binggo[i][j] = numLists[cnt];
+                cnt++;
+            }
+        }
+
+        function writeHtml(binggo) {
+            html = "<table>";
+            for (var i = 0; i < 5; i++) {
+                html += "<tr>"
+                for (var j = 0; j < 5; j++) {
+                    html += "<td>";
+                    html += binggo[i][j];
+                    html += "</td>";
+                }
+                html += "</tr>";
+            }
+            html += "</table>";
+            pan = document.getElementById('pan');
+            pan.innerHTML = html;
+        }
+
+        function suffleBinggo(binggo) {
+            for (var i = 0; i < 100; i++) {
+                var temp;
+                var x = Math.floor(Math.random() * 5);
+                var y = Math.floor(Math.random() * 5);
+                temp = binggo[0][0];
+                binggo[0][0] = binggo[x][y];
+                binggo[x][y] = temp;
+            }
+            writeHtml(binggo);
+        }
+
+        function chk() {
+            var numIn = document.getElementById('in');
+            var val = document.getElementById('val');
+            num = Number(numIn.value);
+            
+            
+            
+            
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++) {
+                    if (binggo[i][j] == num) {
+                        binggo[i][j] = 0;
+                    }
+                }
+            }
+            writeHtml(binggo);
+            tottext += num + " "; //숫자 입력 후 0으로 만들기
+            val.value = tottext;
+            numIn.value = ""; //입력창 공백
+            numIn.focus(); //입력눌러도 창을 안벗어남
+            binggoTest();
+        }
+        /* 가로 빙고 체크 */
+        function binggoTest() {
+            for (var i = 0; i < 5; i++) {
+                var cnt = 0;
+                for (var j = 0; j < 5; j++) {
+                    if (binggo[i][j] == 0) {
+                        cnt += 1;
+                    }
+                    if (cnt == 5) {
+                        alert('BingGo!!!!!!!!!!!!!!!!!')
+                    }
+                }
+            }
+
+            /* 세로 빙고 체크 */
+            for (var i = 0; i < 5; i++) {
+                var cnt = 0;
+                for (var j = 0; j < 5; j++) {
+                    if (binggo[j][i] == 0) {
+                        cnt += 1;
+                    }
+                    if (cnt == 5) {
+                        alert('BingGo!!!!!!!!!!!!!!!!!')
+                    }
+                }
+            }
+
+            /* 대각선(왼쪽) 빙고 체크 */
+            var cnt = 0;
+            for (var i = 0; i < 5; i++) {
+                if (binggo[i][i] == 0) {
+                    cnt += 1;
+                }
+                if (cnt == 5) {
+                    alert('BingGo!!!!!!!!!!!!!!!!!')
+                }
+            }
+            /* 대각선(오른쪽) 빙고 체크 */
+            var cnt = 0;
+            for (var i = 0; i < 5; i++) {
+                if (binggo[i][4 - i] == 0) {
+                    cnt += 1;
+                }
+                if (cnt == 5) {
+                    alert('BingGo!!!!!!!!!!!!!!!!!')
+                }
+            }
+        }
+        window.onload = function() {
+            writeHtml(binggo);
+            suffleBinggo(binggo);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="title">
+            <h1>빙고 게임</h1>
+        </div>
+        <div id="pan">
+
+        </div>
+        <div id="input">
+            <input type="text" id="in">
+            <button value="입력" id="btn" onclick="chk();">입력</button>
+        </div>
+        <div id="value">
+            <input type="text" id="val">
+        </div>
+    </div>
+</body></html>

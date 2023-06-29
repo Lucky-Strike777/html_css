@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script>
+        window.onload = function(){
+            alert('시작합니다.');
+        }
+        
+        var a = (function(){
+            alert('지금 실행')
+        })();
+        
+        var endProg = function(){
+            alert('종료합니다.');
+        }
+        function loginChk() {
+            var id = document.getElementById("id").value;
+            if (!(id.length >= 8 && id.length <= 13)) {
+                alert('아이디는 8자 이상 13자 이하입니다.');
+                return false;
+            }
+            var pw = document.getElementById("pw").value;
+            if (!(pw.length >= 8 && pw.length <= 13)) {
+                alert('비밀번호는 8자 이상 13자 이하입니다.');
+                return false;
+            }
+            var pwconfirm = document.getElementById("pwconfirm").value;
+            if (pw != pwconfirm) {
+                alert('비밀번호와 같지 않습니다');
+                return false;
+            }
+            endProg();
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" id="id"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" id="pw"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" id="pwconfirm"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" onclick="loginChk();"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+
+</body></html>

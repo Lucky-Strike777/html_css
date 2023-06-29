@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            frm=document.frm;
+            frm.onsubmit = function(){
+                console.log(frm.search.value);
+                console.log(frm.chk1.checked);
+                console.log(frm.chk2.checked);
+                console.log(frm.sel1.value);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method = "post" name="frm">
+        <input type ="text" name="search" id = "search"
+        placeholder="검색어 입력"><br>
+        <input type="checkbox" id="chk1" name="chk1">IT
+        <input type="checkbox" id="chk2" name="chk2">영화<br>
+        <input type="submit" value="확인"><br>
+        
+        <select name="sel1">
+            <option>html</option>
+            <option>css</option>
+            <option>java</option>
+            <option>jquery</option>
+        </select>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.3.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            width: 100px;
+            height:100px;
+            float: left;
+            opacity: 0.5;
+        }
+        #board{
+            width: 500px;
+            height: 100px;
+            position: relative;
+            top: 100px;
+        }
+        #box{
+            width: 500px;
+            height: 100px;
+            position: relative;
+            left: -400px;
+        }
+        #home{
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            background: #666;
+            left: 0;
+            top: 0;
+            line-height: 100px;
+            cursor: pointer;
+        }
+        #home p{
+            color: #fff;
+        }
+    </style>
+    <script>
+        $(function(){
+//           $('#home').hover(function(){
+////              $('#box').css({left:'50px'});
+//               $('#box').animate({left:'50px'},2000);
+//           }, function(){
+//               $('#box').animate({left:'-400px'},2000);
+//           });
+            var sw = 1;
+            $('#home').click(function(){
+               if(sw==1){
+                   $('#box').animate({left:'50px'},2000);
+                   sw *= -1
+               } else{
+                   $('#box').animate({left:'-400px'},2000);
+               }
+            });
+            
+            
+            $('.img').on('mouseenter', function(){
+                $(this).animate({opacity:1},1000);
+            });
+            $('.img').on('mouseleave', function(){
+                $(this).animate({opacity:0.5},1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id ="board">
+    <div id ="box">
+        <ul>
+            <li>
+                <img class="img" src="../images/f1.jpg">
+                <img class="img" src="../images/f2.jpg">
+                <img class="img" src="../images/f3.jpg">
+                <img class="img" src="../images/f4.jpg">
+            </li>
+        </ul>
+    </div>
+    <div id = "home">
+        <p>HOME</p>
+    </div>
+    </div>
+</body>
+</html>

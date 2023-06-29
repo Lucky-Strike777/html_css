@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        #tab1{
+            width:1000px;
+            border-collapse: collapse;
+        }
+        tr,th,td{
+            border:1px solid #666;
+        }
+        #tab2{
+            width:200px;
+            border-collapse: collapse;
+        }
+        
+    </style>
+</head>
+<body>
+    <table id="tab1">
+       <tr>
+           <th>제목1</th>
+           <th>제목2</th>
+           <th>제목3</th>
+           <th>제목4</th>
+           <th>제목5</th>
+        <tr>
+            <td colspan=2>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td colspan=3>내용</td>
+            <td>내용</td>
+         
+        </tr>
+        <tr>
+            <td rowspan=2>
+                <table id="tab2">
+                    <tr>
+                        <td>보조내용</td>
+                        <td>보조내용</td>
+
+                    </tr>
+                    <tr>
+                        <td>보조내용</td>
+                        <td>보조내용</td>
+
+                    </tr>
+                    <tr>
+                        <td>보조내용</td>
+                        <td>보조내용</td>
+
+                    </tr>
+                </table>
+            </td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+        </tr>
+    </table>
+    <table style="width:500px; border-collapse:collapse">
+        <thead>
+           <caption>표연습</caption>
+            <tr>
+                <th>서울</th>
+                <th>부산</th>
+                <th>대전</th>
+                <th>대구</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <tr>
+                <td>1,234</td>
+                <td>1,045</td>
+                <td>879</td>
+                <td>1,114</td>
+            </tr>
+            <tr>
+                <td>1,234</td>
+                <td>1,045</td>
+                <td>879</td>
+                <td>1,114</td>
+            </tr>
+            <tr>
+                <td>1,234</td>
+                <td>1,045</td>
+                <td>879</td>
+                <td>1,114</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>4,5634</td>
+                <td>3,7634</td>
+                <td>4,1234</td>
+                <td>3,6786</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Style</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <style>
+        
+        *{
+            margin: 0; padding: 0;
+        }
+        h1, #box p{
+            color: rgb(255,0,0);
+        }
+        p{
+            color:red; //16진수로 지정 rgb값(0~f)
+        }
+        #box p[class="txt1"]{
+            color: blue;
+        }
+        #box .txt2{
+            color:green;
+        }
+        #main{
+            width: 100%;
+            height: 40px;
+            background: blue;
+        }
+        #main > ul > li{
+            list-style: none;
+           /*display:inline; */
+            float:left;
+            width: 150px;
+            height: 40px;
+            background: orange;
+            line-height: 40px
+        }
+        #main > ul > li > a{
+            /*color: #fff;*/
+            font-size: 18px;
+            width: 100%;
+            height: 100%;
+            background: red;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover{
+            color:yellow;
+        }
+        #article > p.tit{
+            color: orange;
+        }
+        #article > p{
+            color: red !important;
+        }
+        #article > .tit:first-letter{
+            color: blue;
+            font-size: 24px;
+        }
+        #article > ul> li:first-child,#article > ul> li:last-child{
+            color: blue;
+        }
+        #article > ul> li:nth-child(3n){
+            color:red;
+        }
+        #basic:after{
+            content: "아티클 영역 위 입니다";
+            color: green;
+        }
+        #basic > h1{
+            font-size: 3vw;
+        }
+        #txt p{
+            font-family: 'Gugi', cursive;
+            letter-spacing: 5px;
+            word-spacing: 20px;
+            font-size: 40px;
+            text-shadow: 1px 1px 10px rgba(255, 0,0,0.5);
+            text-align: justify;
+        }
+        #verti{
+            width: 500px;
+            height:200px;
+            border:1px solid #333;
+            margin-left: 100px;
+        }
+        #verti > img{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+      <!--header-->
+      <header>
+          <div id="logo">
+              
+          </div>
+          <div id="main">
+             <ul>
+                 <li><a href="https://www.naver.com">MENU1</a></li>
+                 <li><a href="#">MENU2</a></li>
+                 <li><a href="#">MENU3</a></li>
+                 <li><a href="#">MENU4</a></li>
+             </ul>
+              
+          </div>
+      </header>  
+      <section>
+          <div id="basic">
+              <h1>텍스트 스타일 지정</h1>
+              <P>글자에 속성 지정</P>
+              <div id="box" class="p1">
+                  <p>자손의 글자 속성</p>
+                  <p class="txt1">속성을 가진 텍스트</p>
+                  <p class="txt2">속성을 가진 텍스트</p>
+              </div>
+          </div>
+          <div id="article">
+              <p class="tit">
+                  가상요소 선택자
+              </p>
+              <ul>
+                  <li>첫번째 줄</li>
+                  <li>두번째 줄</li>
+                  <li>세번째 줄</li>
+                  <li>네번째 줄</li>
+                  <li>다섯번째 줄</li>
+                  <li>여섯번째 줄</li>
+              </ul>
+          </div>
+          <div id="txt">
+              <p>웹에서 글자의 글꼴은 웹폰트를 이용하여 지정</p>
+          </div>
+          <div id="verti">
+             <img src="../images/f1.jpg">
+              세로정렬
+          </div>
+      </section>
+    </div>
+</body>
+
+</html>

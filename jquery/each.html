@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Each</title>
+    <script src="../js/jquery-3.6.3.js"></script>
+    <script>
+        var city = ["서울", "대전", "대구", "부산"];
+        $.each(city, function(index, value) {
+            console.log(index + value);
+        });
+        for (var i of city) {
+            console.log(i);
+        }
+        $(function() {
+            $('.item').click(function() {
+                //                $('.item').removeClass('on');
+                $('.item').each(function() {
+                    if ($(this).hasClass('on')) {
+                        $(this).removeClass('on');
+                    }
+                });
+                $(this).addClass('on')
+
+            });
+            //            $('#container>h1').mouseenter(function() {
+            //                var txt = $('#container>h1').text();
+            //                console.log(txt);
+            //                $('#container>p').text(txt);
+            //            })
+            //             $('#container>h1').mouseleave(function(){
+            //                  $('#container>p').text('');
+            //             });
+            $('#container>h1').hover(function() {
+                var txt = $('#container>h1').text();
+                $(this).after('<p>' + txt + '</p>');
+            }, function() {
+                $(this).parent().find('p').remove();
+            });
+        });
+    </script>
+    <style>
+        li {
+            list-style: none;
+            color: #000;
+        }
+
+        li.on {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li class="item">html</li>
+            <li class="item">css</li>
+            <li class="item">javascript</li>
+            <li class="item">jquery</li>
+        </ul>
+    </div>
+    <div id="container">
+        <h1>텍스트 선택</h1>
+
+    </div>
+</body></html>

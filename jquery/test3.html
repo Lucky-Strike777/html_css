@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test3</title>
+</head>
+<script src="../js/jquery-3.6.3.js"></script>
+<style>
+    #wrap {
+        width: 100%;
+    }
+
+    #header {
+
+        height: 35px;
+        background: #444859;
+    }
+
+    #topMenu {
+
+        height: 80px;
+        background: #2b2f3e;
+
+    }
+
+    #main {
+        height: 435px;
+    }
+
+    #newspopUp {
+        height: 305px;
+    }
+
+    #news {
+        width: 50%;
+    }
+
+    #popUp {
+        width: 50%;
+
+
+    }
+
+    #festival {
+        height: 105px;
+    }
+
+    #FAQ {
+        height: 430px;
+    }
+
+    #footer {
+        height: 120px;
+    }
+
+    #header>.headerLink {
+        text-align: right;
+        text-decoration-line: none;
+    }
+
+    #header>.headerLink>.header {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    #header>.headerLink {
+        margin-right: 300px;
+    }
+
+    #mainImg {
+        height: 435px;
+        width: 100%;
+    }
+
+    #slogan {
+        position: absolute;
+    }
+
+    #logo {
+        display: block;
+        margin: 0px auto;
+        padding-top: 15px;
+        margin-left: 350px;
+    }
+
+    #logo2 {
+
+        float: left;
+        padding-top: 15px;
+        margin-left: 10px;
+    }
+
+    #slogan {
+        font-size: 25px;
+        color: #444;
+        margin-top: 50px;
+    }
+
+    #sloganlib {
+        color: #222;
+        font-size: 30px;
+    }
+
+    @media screen and (min-width:1000px) {
+        #logo2 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        #header {
+            display: none
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #666;
+        font-size: 1.2em;
+    }
+
+    #hMenu {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #hMenu>ul>li {
+        width: 150px;
+        height: 40px;
+        float: right;
+    }
+
+    #hMenu>ul>li>a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .sub {
+        text-indent: 30px;
+        z-index: 99;
+    }
+    .dep2{
+        z-index: 999;
+    }
+</style>
+<script>
+    $(function() {
+        $('.sub').hide();
+        $('.dep1 a').mouseover(function() {
+            $('.sub').slideDown(300);
+        });
+        $('.sub').mouseleave(function() {
+            $('.sub').slideUp(100);
+        })
+    });
+</script>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="headerLink">
+                <a class="header Home" href="#">HOME</a>
+                <a class="header SiteMap" href="#">사이트맵</a>
+                <a class="header Language" href="#">LANGUAGE</a>
+                <a class="header CyberLybrary" href="#">사이버도서관</a>
+                <a class="header DaeJeon" href="#">대전광역시청</a>
+            </div>
+        </div>
+
+        <div id="topMenu">
+            <div id="hMenu">
+                <ul id="depth1">
+                    <li class="dep1">
+                        <a href="#">Title1</a>
+                        <ul class="sub">
+                            <li class="dep2">subMenu1</li>
+                            <li class="dep2">subMenu2</li>
+                            <li class="dep2">subMenu3</li>
+                            <li class="dep2">subMenu4</li>
+                        </ul>
+                    </li>
+                    <li class="dep1">
+                        <a href="#">Title2</a>
+                        <ul class="sub">
+                            <li class="dep2">subMenu1</li>
+                            <li class="dep2">subMenu2</li>
+                            <li class="dep2">subMenu3</li>
+                            <li class="dep2">subMenu4</li>
+                        </ul>
+                    </li>
+                    <li class="dep1">
+                        <a href="#">Title3</a>
+                        <ul class="sub">
+                            <li class="dep2">subMenu1</li>
+                            <li class="dep2">subMenu2</li>
+                            <li class="dep2">subMenu3</li>
+                            <li class="dep2">subMenu4</li>
+                        </ul>
+                    </li>
+                    <li class="dep1">
+                        <a href="#">Title4</a>
+                        <ul class="sub">
+                            <li class="dep2">subMenu1</li>
+                            <li class="dep2">subMenu2</li>
+                            <li class="dep2">subMenu3</li>
+                            <li class="dep2">subMenu4</li>
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div id="log2">
+                <img id="logo2" src="../images/libLogo2.PNG">
+            </div>
+            <div id="log1">
+                <img id="logo" src="../images/libLogo.PNG">
+            </div>
+
+        </div>
+
+        <div id="main">
+
+            <span id="slogan">행복한 삶과 미래를 창조하는 <strong id="sloganlib">한밭도서관</strong></span>
+            <img id="mainImg" src="../images/libraryimg.jpg">
+
+        </div>
+        <div id="newspopUp">
+            <div id="news">
+                news
+            </div>
+
+            <div id="popUp">
+                popup
+            </div>
+        </div>
+        <div id="festival">
+            festival
+        </div>
+
+        <div id="info">
+            info
+        </div>
+
+        <div id="quickMenu">
+            quickmenu
+        </div>
+
+        <div id="timeInfo">
+            timeinfo
+        </div>
+
+        <div id="subMenu">
+            submenu
+        </div>
+
+        <div id="footer">
+            footer
+        </div>
+    </div>
+</body></html>

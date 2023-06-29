@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <script>
+     /*   var today = new Date(2023, 0, 12);
+        var birth = new Date(1994, 4, 16);
+        var life = today - birth;
+        console.log(life / 24 / 60 / 60 / 1000);
+        */
+        
+        var regExp = /(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/;
+        var id1 = 'sd231!S2';
+        var id2 = 'sdfF3##';
+        var id3 = 'ffdfA1!d';
+        console.log(regExp.test(id1));
+        console.log(regExp.test(id2));
+        console.log(regExp.test(id3));
+        console.log(id1.match(regExp));
+        console.log(id2.match(regExp));
+        console.log(id3.match(regExp));
+    </script>
+    
+</head>
+
+<body>
+
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functionEX01</title>
+    <script>
+        var imgno = 1;
+        
+        window.onload=function(){
+            priv.onclick = function(){
+                if(imgno == 1){
+                    imgno = 5;
+                }
+                else{
+                    imgno -= 1;
+                }
+                img.setAttribute('src','../images/f'+imgno+'.jpg');
+                }
+            
+            next.onclick = function(){
+                if(imgno == 5){
+                    imgno = 1;
+                }
+                else{
+                    imgno += 1;
+                }
+                img.setAttribute('src','../images/f'+imgno+'.jpg');
+                }
+            }
+        
+        
+        function funcUp(){
+            var btnUp =  document.getElementById('counter');
+            var cnt = btnUp.innerText;
+            cnt = Number(cnt);
+            cnt += 1;
+            btnUp.innerHTML=cnt;
+        }
+        
+        function funcDown(){
+            var btnDown =  document.getElementById('counter');
+            var cnt = btnDown.innerText;
+            cnt = Number(cnt);
+            cnt -= 1;
+            btnDown.innerHTML=cnt;
+        }
+        
+        function opct(){
+            if(arguments.length == 1){
+                img.style.opacity=arguments[0];    
+            }
+            else if(arguments.length == 2){
+                img.style.opacity=arguments[0];
+                img.style.width=arguments[1]+'px';
+            }
+            else if(arguments.length == 2){
+                img.style.opacity=arguments[0];
+                img.style.width=arguments[1]+'px';
+                img.style.height=arguments[2]+'px';
+            }
+            
+        }
+    </script>
+    <style>
+        #box{
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        
+        #imgBox{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        #img{
+            width:400px;
+            height:200px;
+        }
+        
+        #btnGroup{
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1 id="counter">1</h1>
+        <button id="btnUp" onclick="funcUp();">UP</button>
+        <button id="btnDown" onclick="funcDown();">Down</button>
+    </div>
+    <div id="imgBox">
+        <img src="../images/f1.jpg" id="img">
+    </div>
+    <div id="btnGroup">
+        <button id="priv">prev</button>
+        <button id="next">next</button>
+        <button id="op1" onclick="opct(0.0, 200);">0.0</button>
+        <button id="op2" onclick="opct(0.2);">0.2</button>
+        <button id="op3" onclick="opct(0.4, 150, 300);">0.4</button>
+        <button id="op4" onclick="opct(0.6);">0.6</button>
+        <button id="op5" onclick="opct(0.8);">0.8</button>
+        <button id="op6" onclick="opct(1.0);">1.0</button>
+    </div>
+</body>
+</html>

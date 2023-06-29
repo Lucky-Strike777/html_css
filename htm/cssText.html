@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 80%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        #top {
+            width: 100%;
+            height: 200px;
+        }
+
+        #aside {
+            width: 150px;
+            height: auto;
+            border: 1px solid red;
+            float: left;
+        }
+
+        #aside>#depth1 {
+            width 100%;
+            height: auto;
+        }
+
+        #aside>#depth1>li {
+            width: 100%;
+            height: auto;
+        }
+
+        #aside>#depth1>li>a {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            text-indent: 10px;
+        }
+
+        #aside>#depth1>li>a:hover {
+            color: #000;
+            font-weight: bold;
+            background: orange;
+        }
+
+        #aside #depth2>li {
+            width: 100%;
+            height: 25px;
+        }
+
+        #aside #depth2>li a {
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            /*  text-indent: 20px; */
+            padding-left: 20px;
+            box-sizing: border-box;
+
+        }
+
+        #aside #depth2>li a:hover {
+            color: #000;
+            background: blue;
+            color: #fff;
+        }
+
+        #container {
+            float left;
+            margin-left: 10px;
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #container p{
+            width: 300px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        #navi{
+            clear: both;
+        }
+        .gnb li{
+            display: inline-block;
+        }
+        .gnb li a{
+            display: block;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background: #ccc;
+            text-align: center;
+        }
+        .gnb li a:hover{
+            background: darkred;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top">
+
+        </div>
+        <div id="aside">
+            <ul id="depth1">
+                <li>
+                    <a href="#">MENU1</a>
+                    <ul id="depth2">
+                        <li>
+                            <a href="#">SUB MENU1</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU2</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU3</a>
+                        </li>
+                    </ul>
+
+                <li>
+                    <a href="#">MENU2</a>
+                    <ul id="depth2">
+                        <li>
+                            <a href="#">SUB MENU1</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU2</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU3</a>
+                        </li>
+                    </ul>
+                <li>
+                    <a href="#">MENU3</a>
+                    <ul id="depth2">
+                        <li>
+                            <a href="#">SUB MENU1</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU2</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU3</a>
+                        </li>
+                    </ul>
+                <li>
+                    <a href="#">MENU4</a>
+                    <ul id="depth2">
+                        <li>
+                            <a href="#">SUB MENU1</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU2</a>
+                        </li>
+                        <li>
+                            <a href="#">SUB MENU3</a>
+                        </li>
+                    </ul>
+        </div>
+        <div id="container">
+            <p>본문의 내용이 길면 영역 밖으로 벗어난 문자를 처리하는 방법으로 white-space 속성을 지정한다.</p>
+        </div>
+        <div id="navi">
+            <ul class="gnb">
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        </div>
+</body></html>

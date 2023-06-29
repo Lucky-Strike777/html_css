@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gridlayout</title>
+    <style>
+        *{margin: 0;
+         padding: 0;     
+         text-align: center;}
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            display: grid;
+            grid-template-columns: 20% 20% 10% 10% 5% 15% 10% 10%;
+            grid-template-rows: 50px 50px 50px 200px 150px 150px;
+        }
+        .box{
+            border: 1px solid red;
+        }
+        .b1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #ddd;
+        }
+        .b2{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            background: #bbb;
+        }
+        .b3{
+            grid-column-start: 5;
+            grid-column-end: 9;
+            background: #999;
+        }
+        .b4{
+            grid-column-start: 1;
+            grid-column-end: 9;
+            background: #bbb;
+        }
+        .b5{
+            grid-column-start: 1;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        .b6{
+            grid-column-start: 1;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        .b7{
+            grid-column-start: 1;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        .b8{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #bbb;
+        }
+        .b9{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background: #ddd;
+        }
+        .b10{
+            grid-column-start: 4;
+            grid-column-end: 8;
+            background: #ddd;
+        }
+        .b11{
+            grid-column-start: 8;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        .b12{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #ddd;
+        }
+        .b13{
+            grid-column-start: 2;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        .b14{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #ddd;
+        }
+        .b15{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background: #ddd;
+        }
+        .b16{
+            grid-column-start: 4;
+            grid-column-end: 6;
+            background: #ddd;
+        }
+        .b17{
+            grid-column-start: 6;
+            grid-column-end: 7;
+            background: #ddd;
+        }
+        .b18{
+            grid-column-start: 8;
+            grid-column-end: 9;
+            background: #ddd;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box b1">
+            <h1>b1</h1>
+        </div>
+        <div class="box b2">
+            <h1>b2</h1>
+        </div>
+        <div class="box b3">
+            <h1>b3</h1>
+        </div>
+        <div class="box b4">
+            <h1>b4</h1>
+        </div>
+        <div class="box b5">
+            <h1>b5</h1>
+        </div>
+        <div class="box b6">
+            <h1>b6</h1>
+        </div>
+        <div class="box b7">
+            <h1>b7</h1>
+        </div>
+        <div class="box b8">
+            <h1>b8</h1>
+        </div>
+        <div class="box b9">
+            <h1>b9</h1>
+        </div>
+        <div class="box b10">
+            <h1>b10</h1>
+        </div>
+        <div class="box b11">
+            <h1>b11</h1>
+        </div>
+        <div class="box b12">
+            <h1>b12</h1>
+        </div>
+        <div class="box b13">
+            <h1>b13</h1>
+        </div>
+        <div class="box b14">
+            <h1>b14</h1>
+        </div>
+        <div class="box b15">
+            <h1>b15</h1>
+        </div>
+        <div class="box b16">
+            <h1>b16</h1>
+        </div>
+        <div class="box b17">
+            <h1>b17</h1>
+        </div>
+        <div class="box b18">
+            <h1>b18</h1>
+        </div>
+        
+    </div>
+</body>
+</html>

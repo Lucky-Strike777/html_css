@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <script>
+        window.onload = function() {
+            btn1 = document.getElementsByClassName('btn');
+            len = document.getElementById('len');
+            btn1[0].onclick = function() {
+                console.log('OK!');
+
+            }
+
+            function lenView() {
+                console.log('OK!');
+            }
+            len.addEventListener('click', lenView);
+        }
+
+        function chk() {
+            console.log('OK!')
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <button onclick="console.log('OK!')">클릭</button>
+    <button onclick="chk();">클릭</button>
+    <button class="btn">클릭</button>
+    <button id="len">클릭</button>
+</body>
+
+</html>

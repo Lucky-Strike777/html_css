@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #666;
+            margin: 0 auto;
+        }
+
+        #box>#small {
+            width: 100px;
+            height: 300px;
+            float: left;
+            margin: 1px;
+        }
+
+        #box>#small>img {
+            width: 94px;
+            height: 94px;
+            border: 1px solid red;
+        }
+
+        #large {
+            width: 396px;
+            height: 296px;
+            float: left;
+            margin: 1px;
+        }
+
+        #large>img {
+            width: 396px;
+            height: 296px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var img1 = document.getElementById('img1');
+            var img2 = document.getElementById('img2');
+            var img3 = document.getElementById('img3');
+            var lar = document.getElementById('lar');
+
+            function view(path) {
+                lar.setAttribute('src', path);
+            }
+
+            img1.onclick = function() {
+                path = img1.getAttribute('src');
+                console.log(path);
+                view(path);
+            }
+            img2.onclick = function() {
+                path = img2.getAttribute('src');
+                console.log(path);
+                view(path);
+            }
+            img3.onclick = function() {
+                path = img3.getAttribute('src');
+                console.log(path);
+                view(path);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div id="small">
+            <img id="img1" src="../images/f1.jpg">
+            <img id="img2" src="../images/f2.jpg">
+            <img id="img3" src="../images/f3.jpg">
+        </div>
+        <div id="large">
+            <img id="lar" src="../images/f1.jpg">
+        </div>
+    </div>
+</body></html>

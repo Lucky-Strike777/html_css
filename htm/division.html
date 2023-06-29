@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 80%;
+            margin: 0 auto;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+
+        #inner {
+            width: 300px;
+            height: 300px;
+/*            border: 20px dashed;*/
+/*            border-image: url("../images/f1.jpg") 50 stretch;*/
+            box-sizing: border-box; /* 박스 안쪽으로 적용되므로 박스 사이즈 유지*/
+            outline: 10px solid red; /*border 대신 쓸 수 있지만 같이 쓰면 바깥쪽을 담당한다 */
+            border: 3px solid blue;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid blue;
+            margin: 10px 50px;
+        }
+        textarea{
+            resize: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="inner">
+            <div id="box">
+                <textarea rows="5" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <style>
+        li {
+            list-style: none;
+            cursor: pointer;
+            width: 100px;
+        }
+
+    </style>
+    <script>
+        window.onload = function() {
+            naver = document.getElementById('naver');
+            daum = document.getElementById('daum');
+            google = document.getElementById('google');
+            //            naver.onclick = function(){
+            //                location.href = "https://www.naver.com"
+            //            }
+            //            daum.onclick = function(){
+            //                location.href = "https://www.daum.net"
+            //            }
+            //            google.onclick = function(){
+            //                location.href = "https://www.google.com"
+            //            }
+            //        }
+            //nav = document.getElementsByClassName('nav');
+            nav = document.querySelectorAll('ul').children;
+            for (var i of nav) {
+                i.onclick = function(e) {
+                    console.log(this.title);
+                    location.href = this.title;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li class="nav" title="https:www.naver.com">네이버</li>
+        <li class="nav1" title="https:www.daum.net">다음</li>
+        <li class="nav" title="https:www.google.com">구글</li>
+    </ul>
+</body>
+
+</html>

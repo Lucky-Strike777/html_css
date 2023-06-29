@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>전역변수/지역변수</title>
+    <script>
+        window.onload = function(){
+            var url = "https://naver.com?자바스크립트"
+            var incodingUrl = encodeURIComponent(url);
+            console.log(incodingUrl);
+            console.log(decodeURIComponent(incodingUrl));
+            var num = 20;
+            console.log(isNaN(num));
+            var amount = '12.34개';
+            console.log(parseInt(amount));
+            console.log(parseFloat(amount));
+            var str1='var num1 = 30';
+            eval(str1);
+            console.log(num1);
+        }
+        var kor = 90;
+        function getScore(){
+            let kor = 100;
+            console.log(kor);
+        }
+        getScore();
+        console.log(kor);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade</title>
+    <style>
+        img{
+            width: 420px;
+        }
+    </style>
+    <script src="../js/jquery-3.6.3.js"></script>
+    <script>
+        $(function(){
+           $('#hide').click(function(){
+              $('#img').hide(2000); 
+           }); 
+            $('#show').click(function(){
+              $('#img').show(2000); 
+           }); 
+            $('#slideDown').click(function(){
+              $('#img').slideDown(2000); 
+           }); 
+            $('#slideUp').click(function(){
+              $('#img').slideUp(2000); 
+           }); 
+            $('#fadeIn').click(function(){
+              $('#img').fadeIn(2000); 
+           }); 
+            $('#fadeOut').click(function(){
+              $('#img').fadeOut(2000); 
+           }); 
+        });
+    </script>
+</head>
+<body>
+    <div id="img">
+        <img src="../images/f2.jpg">
+    </div>
+    <div>
+        <button id="hide">hide()</button>
+        <button id="show">show()</button>
+        <button id="slideDown">slideDown()</button>
+        <button id="slideUp">slideUp()</button>
+        <button id="fadeIn">fadeIn()</button>
+        <button id="fadeOut">fadeOut()</button>
+    </div>
+</body>
+</html>

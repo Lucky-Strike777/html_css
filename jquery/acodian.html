@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.3.js"></script>
+
+    <style>
+        #box {
+            width: 430px;
+            height: 400px;
+            border: 1px solid #999;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .inner {
+            width: 50px;
+            height: 1px;
+            position: absolute;
+        }
+
+        .eq1 {
+            left: 10px;
+            bottom: 0;
+            background: red;
+
+        }
+
+        .eq2 {
+            left: 70px;
+            bottom: 0;
+            background: orange;
+
+        }
+
+        .eq3 {
+            left: 130px;
+            bottom: 0;
+            background: yellow;
+
+        }
+
+        .eq4 {
+            left: 190px;
+            bottom: 0;
+            background: green;
+
+        }
+
+        .eq5 {
+            left: 250px;
+            bottom: 0;
+            background: blue;
+
+        }
+
+        .eq6 {
+            left: 310px;
+            bottom: 0;
+            background: darkblue;
+
+        }
+
+        .eq7 {
+            left: 370px;
+            bottom: 0;
+            background: purple;
+
+        }
+        
+        
+        #box2 {
+            width: 430px;
+            height: 430px;
+            border: 1px solid #999;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .lower {
+            width: 400px;
+            height: 50px;
+            position: absolute;
+        }
+
+        .ep1 {
+            
+            top: 10px;
+            background: red;
+
+        }
+
+        .ep2 {
+            top: 70px;
+            background: orange;
+
+        }
+
+        .ep3 {
+            top: 130px;
+            background: yellow;
+
+        }
+
+        .ep4 {
+            top: 190px;
+            background: green;
+
+        }
+
+        .ep5 {
+            top: 250px;
+            background: blue;
+
+        }
+
+        .ep6 {
+            top: 310px;
+            background: darkblue;
+
+        }
+
+        .ep7 {
+            top: 370px;
+            background: purple;
+
+        }
+    </style>
+    <script>
+        var interval;
+        $(function() {
+            interval = setInterval(function() {
+                for (var i = 1; i < 8; i++) {
+                    var r = Math.floor(Math.random() * 350);
+                    $('.eq' + i).animate({height:r+'px'},30)
+                    $('.ep' + i).animate({width:r+'px'},30)
+                }
+            }, 50);
+        });
+        
+        
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div class="inner eq1"></div>
+        <div class="inner eq2"></div>
+        <div class="inner eq3"></div>
+        <div class="inner eq4"></div>
+        <div class="inner eq5"></div>
+        <div class="inner eq6"></div>
+        <div class="inner eq7"></div>
+    </div>
+    <div id="box2">
+        <div class="lower ep1"></div>
+        <div class="lower ep2"></div>
+        <div class="lower ep3"></div>
+        <div class="lower ep4"></div>
+        <div class="lower ep5"></div>
+        <div class="lower ep6"></div>
+        <div class="lower ep7"></div>
+    </div>
+</body></html>

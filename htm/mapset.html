@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map/Set</title>
+    <script>
+        var sub = new Map([['name', '홍길동'],['age', 30], ['addr','대전']]);
+        console.log(sub.size);
+        console.log(sub.get('name'));
+        for (var el of sub){
+            console.log(el);
+        }
+        for(var el of sub.keys()){
+            console.log(el);
+        }
+        for(var el of sub.values()){
+            console.log(el);
+        }
+        
+        var lists = new Set();
+        lists.add('사과');
+        lists.add('배');
+        lists.add('바나나');
+        lists.add('사과');
+        lists.add('복숭아');
+        lists.add('파인애플');
+        lists.add('사과');
+        
+        console.log(lists.size);
+        console.log(lists);
+        
+        for(var i of lists){
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

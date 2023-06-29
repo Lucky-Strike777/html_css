@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #outer {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        #inner {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            background: #999;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            window.open('binggo.html', '빙고게임', 'width=600 ,height=600, left=300, top=200')
+            outer = document.getElementById('outer');
+            inner = document.getElementById('inner');
+            naver = document.getElementById('naver');
+            outer.onclick = function() {
+                alert('Outer 입니다');
+            }
+            inner.onclick = function(e) {
+                e.stopPropagation();
+                alert('Inner입니다')
+            }
+            naver.onclick = function(e) {
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+
+        </div>
+    </div>
+    <a id="naver" href="https://www.naver.com">네이버</a>
+</body></html>

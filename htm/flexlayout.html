@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flexlayout</title>
+    <style>
+        #box{
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            height: 200px;
+            background: #ccc;
+        }
+        #box .img{
+            border: 1px solid red;
+            flex: 1 1 200px;
+    
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        #vertical{
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #vertical div{
+            flex: 1;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+        <div class="img">
+            <img src="../images/f1.jpg">
+        </div>
+    </div>
+    <div id="vertical">
+        <div>
+            <img src="../images/logo.png">
+        </div>
+        <div>
+            <img src="../images/logo.png">
+        </div>
+        <div>
+            <img src="../images/logo.png">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

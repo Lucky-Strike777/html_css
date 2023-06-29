@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interval</title>
+    <style>
+        #counter{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img{
+            opacity: 0;
+        }
+        #box{
+            width: 50px;
+            height: 50px;
+            background: orange;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        #view{
+            width: 0;
+            height: 0;
+            background: blue;
+        }
+    </style>
+    <script>
+        var interval;
+        window.onload = function(){
+            cnt = 0;
+            disp = document.getElementById('disp');
+            img = document.getElementById('gallary').firstElementChild;
+            interval = setInterval(function(){
+                cnt++;
+                disp.innerHTML = cnt;
+                img.style.opacity = cnt / 10;
+                if(cnt==10){
+                clearInterval(interval);
+                }
+            }, 1000);
+            
+            start = document.getElementById('start');
+            stop = document.getElementById('stop');
+            box = document.getElementById('box');
+            var timer;
+            var pos = 0;
+            start.onclick = function(){
+                timer = setInterval(function(){
+                    pos += 5;
+                    box.style.left = pos + 'px';               
+                }, 100);    
+            }
+            stop.onclick = function(){
+                clearInterval(timer);
+            }
+            view = document.getElementById('view');
+            large = document.getElementById('large');
+            small = document.getElementById('small');
+            
+            var max_size = 300;
+            var mover;
+            var basic_size = 0;
+            
+            large.onclick = function(){
+                mover = setInterval(function(){
+                    basic_size += 2;
+                    view.style.width = basic_size + 'px';
+                    view.style.height = basic_size + 'px';
+                    if(basic_size >= max_size){
+                        clearInterval(mover);
+                    }
+                }, 20);
+            }
+            small.onclick = function(){
+                mover = setInterval(function(){
+                    basic_size -= 2;
+                    view.style.width = basic_size + 'px';
+                    view.style.height = basic_size + 'px';
+                    if(basic_size <= 0){
+                        clearInterval(mover);
+                    }
+                }, 20);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="counter">
+        <h1 id="disp">0</h1>
+    </div>
+    <div id="gallary">
+        <img src="../images/f1.jpg">
+    </div>
+    <div id="box">
+        
+    </div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div id="view">
+        
+    </div>
+    <button id="large">large</button>
+    <button id="small">Small</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+    <script>
+        function st(name, age, addr) {
+            this.name = name;
+            this.age = age;
+            this.addr = addr;
+
+            this.printSt = function() {
+                document.write('이름 : ' + this.name + '<br>' + '나이 : ' + this.age + '<br>' + '주소 : ' + this.addr + '<br>');
+            }
+        }
+        st.prototype.prt = function(){
+            return this.name + '은 ' + this.addr + '에서 산다.' ;
+        }
+        
+        
+        st1 = new st('홍길동', 30, '대전');
+        st2 = new st('이쁜이', 25, '서울');
+        st1.birth = '1995-10-12';
+        st1.printSt();
+        st2.printSt();
+        console.log(st1.birth);
+        
+        
+        console.log(st1.prt());
+    </script>
+</head>
+
+<body>
+
+</body></html>

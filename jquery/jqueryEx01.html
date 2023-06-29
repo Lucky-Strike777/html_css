@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery기본</title>
+    <!--    <script src="../js/jquery-3.6.3.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        //        window.onload = function(){
+        //            
+        //        }
+        //        
+        //        $(document).ready(function(){
+        //                          
+        //        });
+        $(function() {
+            //            $('#box>ul>li').css('list-style', 'none','color','red');
+            $('#box>ul>li').css({
+                'list-style': 'none',
+                'color': 'red'
+            })
+
+
+            $('#box>ul>li').click(function() {
+                console.log('click');
+                $(this).css({
+                    'color': 'blue',
+                    'font-size': '32px'
+                });
+            });
+            
+            $('#btn').click(function(){
+               $('#box>ul>li').eq(2).css({color:'orange'})
+            });
+            
+        });
+
+    </script>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>jquery</li>
+        </ul>
+        <button id = "btn">클릭</button>
+    </div>
+</body>
+
+</html>

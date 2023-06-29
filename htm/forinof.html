@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For in/of</title>
+    <script>
+        var info = [23, 45, 'abc', '홍길동', 6, 12, 34];
+        /* for (var i in info) {
+            console.log(info[i]);
+        }
+        for (var i of info) {
+            console.log.i;
+        }
+
+        info.forEach(function(value, index, array) {
+            console.log(value);
+            console.log(index);
+            console.log(array);
+        }) */
+
+        console.log(info);
+        var temp = [];
+        info1 = info.map(function(value, index, array) {
+            if (typeof(value) === 'number') {
+                temp.push(value);
+            }
+        });
+        console.log(temp);
+        
+        console.log(Math.ceil(5.6));
+        console.log(Math.ceil(-5.6));
+        console.log(Math.floor(5.6));
+        console.log(Math.floor(-5.6));
+        console.log(Date.now());
+        var today=new Date();
+        console.log(today);
+        var birth = new Date(1995, 7, 5);;
+        console.log(birth);
+        console.log(today.getDate());
+        console.log(today.getFullYear());
+        console.log(today.getDay());   //요일
+        console.log(today.getMonth());
+        
+    </script>
+</head>
+
+<body>
+
+</body></html>

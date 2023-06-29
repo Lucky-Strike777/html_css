@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div</title>
+    <style>
+        #wrap{
+            width: 800px;
+            height: 1000px;
+            border: 1px solid red;
+            background: #333;
+        }
+        
+        #top{
+            width: 100%;
+            height: 50px;
+            background: blue;
+        }
+        
+        #navi{
+            width: 100%;
+            height: 60px;
+            background: #fff;
+        }
+        #navi > ul > li{
+            list-style: none;
+            float: left;
+            line-height: 60px;
+            width: 150px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #slide{
+            width: 100%;
+            height: 300px;
+            background: #666;
+        }
+        #slide > img{
+            width: 100%;
+            height: 100%;
+        }
+        #section{
+            width: 100%
+        }
+        .article{
+            width: 49%;
+            height: 300px;
+            border: 2px solid blue;
+            float: left;
+            background: #fff;
+        }
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+        .de{
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top">
+            <h2>여기는 top영역입니다.</h2>
+        </div>
+        <div id="navi">
+            <ul>
+                <li>MENU 1</li>
+                <li>MENU 2</li>
+                <li>MENU 3</li>
+                <li>MENU 4</li>
+                <li>MENU 5</li>
+            </ul>
+        </div>
+        <div id="slide">
+            <img src="../images/f1.jpg">
+        </div>
+        <div id="section">
+            <div class="article">
+                <p><span class="red">우리나라</span>
+                <span class="green">금수강산</span>이다
+                <span class="red de">대전</span>은
+                <span class="blue">편안한 고장</span>입니다</p>
+                
+            </div>
+            <div class="article">
+                <audio src="../media/applause.wav" controls="controls"></audio>
+            </div>
+            <div class="article">
+                <video controls poster="../images/sun.jpg" width="400" height="300">
+                    <source src="../media/sunrise.mp4" type="video/mp4">
+                </video>
+                
+            </div>
+            <div class="article">
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/2mkOUrmsUmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #head {
+            height: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu {
+            list-style: none;
+            float: left;
+            margin-right: 20px;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+
+        #logo {
+            position: relative;
+            height: 100px;
+        }
+
+        #logo1 {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+
+        }
+
+        #logo1 img {
+            width: 180px;
+            height: 80px;
+        }
+
+        #logo2 {
+            top: 30px;
+            position: absolute;
+            left: 200px;
+            font-size: 25px;
+        }
+
+        #logo3 {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #backimg {
+            width: 30000px;
+            height: 300px;
+            background: lightgray;
+            border: none;
+        }
+
+        #slidemain {
+            
+            width: 10000px;
+            height: 300px;
+        }
+
+        .slideimg {
+            margin: 30px;
+            padding: 0;
+            float: left;
+        }
+        #notimain{
+            
+            float: left;
+            margin-left: 150px;
+            border: 1px solid green;
+            
+        }
+        
+        
+        #line{
+            width: 30%;
+            height: 1px;
+            background: #ccc;
+            float: left;
+            margin-top :10px;
+            margin-left: 5px;
+            border: 1px solid yellow;
+        }
+        #notipart{
+            
+            margin-top: 30px;
+            width: 1100px;
+            height: 180px;
+            float: left;
+            border: 1px solid red;
+        }
+        .noti{
+            float: left;
+            margin: 30px;
+            font-weight: 200;
+            font-size: 16px;
+            color: #222222;
+        }
+        #noti1{
+            height: 170px;
+            width: 250px;
+        }
+        #noti2{
+            height: 170px;
+            width: 250px;
+        }
+        .date{
+            font-size: 13px;
+            color: #666;
+        }
+        .content{
+            font-size: 14px;
+        }
+        /*#use{
+            margin-top: 50px;
+            float: right;
+        }
+        #line2{
+            width: 40%;
+            height: 1px;
+            background: #ccc;
+            float: left;
+            margin-top :62px;
+            margin-left: 5px;
+        }
+        #info{
+            width: 600px;
+            display: grid;
+            grid-template-columns: 45% 10% 45%;
+            grid-template-rows: 50px 50px;
+            border: 1px solid red;
+            float: right;
+        }
+        #usetime{
+            grid-column-start: 1; grid-column-end: 2;
+            background: red;
+        }
+        #freeday{
+            grid-column-start: 3; grid-column-end: 4;
+            background:green;
+        }
+        #lunchtime{
+            grid-column-start: 1; grid-column-end: 2;
+                background:blue;
+        }
+        #phonenum{
+            grid-column-start: 3; grid-column-end: 4;
+            background:yellow;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <ul>
+            <li class="menu">
+                <strong>서구청</strong>
+            </li>
+            <li class="menu">
+                <strong>문화체육관광</strong>
+            </li>
+            <li class="menu">
+                <strong>미디어아카이브</strong>
+            </li>
+            <li class="menu">
+                <strong>통합예약</strong>
+            </li>
+            <li class="menu">
+                <strong>보건소</strong>
+            </li>
+            <li class="menu">
+                <strong>서구의회</strong>
+            </li>
+        </ul>
+    </div>
+    <div id=logo>
+        <div id="logo1">
+            <a href="https://www.seogu.go.kr/kor/index.do"><img src="../images/logocap.png"></a>
+        </div>
+        <div id="logo2">
+            <a href="https://www.seogu.go.kr/health/index.do" alt="logo2"><b>보건소</b></a>
+        </div>
+        <div id="logo3">
+            <a href="#" alt="logo3"><img src="../images/logocap2.PNG"></a>
+        </div>
+    </div>
+    <div id="backimg">
+
+    
+    <div id="slidemain">
+        <div id="img1">
+            <div class="slideimg" data-slick-index="1" aria-hidden="false" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img1.jpg"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="img2">
+            <div class="slideimg" data-slick-index="2" aria-hidden="false" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img2.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="img3">
+            <div class="slideimg" data-slick-index="3" aria-hidden="false" role="tabpanel" id="slick-slide03" aria-describedby="slick-slide-control03" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img3.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="img4">
+            <div class="slideimg" data-slick-index="4" aria-hidden="false" role="tabpanel" id="slick-slide04" aria-describedby="slick-slide-control04" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img4.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="img5">
+            <div class="slideimg" data-slick-index="5" aria-hidden="false" role="tabpanel" id="slick-slide05" aria-describedby="slick-slide-control05" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img5.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="img6">
+            <div class="slideimg" data-slick-index="6" aria-hidden="false" role="tabpanel" id="slick-slide06" aria-describedby="slick-slide-control06" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img6.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="img7">
+            <div class="slideimg" data-slick-index="7" aria-hidden="false" role="tabpanel" id="slick-slide07" aria-describedby="slick-slide-control07" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img7.jpg"></a>
+
+                </div>
+            </div>
+        </div>
+        <div id="img8">
+            <div class="slideimg" data-slick-index="8" aria-hidden="false" role="tabpanel" id="slick-slide08" aria-describedby="slick-slide-control08" style="width: 279px;">
+                <div class="content-box" data-item="" style="width: 100%; display: inline-block;">
+                    <a href="https://nct.go.kr/itaewon/mentalSupport.do" target="_blank" class="link" tabindex="0">
+                        <img src="../images/img8.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div id="notimain" alt="공지사항">
+      
+       <h3>공지사항</h3></div>
+       <div id="line">
+           
+       </div>
+       <div id="notipart">
+        <div id="noti1" class="noti">
+           <a href="https://www.seogu.go.kr/bbs/BBSMSTR_000000000234/view.do">
+            <h4>의료기관 화재안전 매뉴얼 배포<br>
+            (2022.12.개정)</h4><br>
+            <p class="content">의료기관 화재안전 매뉴얼 배포<br>
+            (2022.12.개정)</p><br>
+            <p class="date">2023-01-02</p> 
+            </a>   
+        </div>
+        <div id="noti2" class="noti">
+              <a href="https://www.seogu.go.kr/bbs/BBSMSTR_000000000234/view.do">
+              <h4><b>23년 1월 야간당직 의료기관 안내</b></h4><br>
+              <p class="content">첨부파일 확인바랍니다.</p><br>
+              <p class="date">2023-01-02</p>
+              </a>
+               
+        </div>
+    </div>
+    
+    <div id="use" alt="이용안내">
+      
+       <h3>보건소 이용안내</h3></div>
+       <div id="line2">
+       </div>
+    
+    <div id="info">
+        <div id="usetime" class="infocont">
+            <img src="../images/clock.PNG">
+            <span>이용시간  09:00 ~ 18:00 (월~금)</span>
+        </div>
+        <div id="freeday" class="infocont">
+            <img src="../images/calendar.PNG">
+            <span>휴무일  토,일,공휴일</span>
+        </div>
+        <div id="lunchtime" class="infocont">
+            <img src="../images/clock.PNG">
+            <span>점심시간  12:00 ~ 13:00</span>
+        </div>
+        <div id="phonenum" class="infocont">
+            <img src="../images/phone.PNG">
+            <span>대표전화  040-288-4500</span>
+        </div>
+    </div> 
+    
+
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical Menu</title>
+    <script src="../js/jquery-3.6.3.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #vMenu {
+            width: 200px;
+            height: auto;
+            border-right: 1px solid #999;
+        }
+
+        li {
+            list-style: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .dep1 a {
+            width: 100%;
+            height: 40px;
+            display: block;
+            line-height: 40px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #666;
+            text-indent: 20px;
+
+        }
+
+        .dep1 a.on {
+            background: orange;
+        }
+
+        .sub>li {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-indent: 30px;
+        }
+
+    </style>
+    <script>
+        $(function() {
+            $('.sub').hide(1000);
+            $('.dep1').click(function() {
+                console.log('click!');
+                $('.sub').hide();
+                $('.dep1 a').removeClass('on');
+                $(this).children('a').addClass('on');
+                $(this).children('.sub').show(1000);
+            });
+            $('.sub>li').hover(function() {
+                $(this).css({
+                    background:'cyan'
+                })
+            }, function() {
+                $(this).css({
+                    background:'#fff'
+                })
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="vMenu">
+        <ul id="depth1">
+            <li class="dep1">
+                <a href="#">Title1</a>
+                <ul class="sub">
+                    <li class="dep2">subMenu1</li>
+                    <li class="dep2">subMenu2</li>
+                    <li class="dep2">subMenu3</li>
+                    <li class="dep2">subMenu4</li>
+                </ul>
+            </li>
+            <li class="dep1">
+                <a href="#">Title2</a>
+                <ul class="sub">
+                    <li class="dep2">subMenu1</li>
+                    <li class="dep2">subMenu2</li>
+                    <li class="dep2">subMenu3</li>
+                    <li class="dep2">subMenu4</li>
+                </ul>
+            </li>
+            <li class="dep1">
+                <a href="#">Title3</a>
+                <ul class="sub">
+                    <li class="dep2">subMenu1</li>
+                    <li class="dep2">subMenu2</li>
+                    <li class="dep2">subMenu3</li>
+                    <li class="dep2">subMenu4</li>
+                </ul>
+            </li>
+            <li class="dep1">
+                <a href="#">Title4</a>
+                <ul class="sub">
+                    <li class="dep2">subMenu1</li>
+                    <li class="dep2">subMenu2</li>
+                    <li class="dep2">subMenu3</li>
+                    <li class="dep2">subMenu4</li>
+                </ul>
+            </li>
+            
+             
+           
+        </ul>
+    </div>
+</body>
+
+</html>
